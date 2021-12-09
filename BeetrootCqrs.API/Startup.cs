@@ -6,6 +6,11 @@ using BeetrootCqrs.API.Extentions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using BeetrootCqrs.DAL;
+using BeetrootCqrs.BLL.Interfaces;
+using BeetrootCqrs.BLL.Services;
+using BeetrootCqrs.API.Services;
+using System;
+using MediatR;
 
 namespace BeetrootCqrs.API
 {
@@ -23,6 +28,11 @@ namespace BeetrootCqrs.API
             services.AddSwaggerServiceExt();
             services.AddCors();
             services.AddDbContextExt(_configuration.GetConnectionString("DefaultConnection"));
+
+            services.AddSingleton<IUdpReceiveService, UdpReceiveService>();
+            services.AddHostedService<UdpHostedService>();
+
+            services.AddMediatR(AppDomain.CurrentDomain.Load("BeetrootCqrs.DAL"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)

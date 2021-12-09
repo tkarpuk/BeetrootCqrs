@@ -12,6 +12,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootCqrs.API", "BeetrootCqrs.API\BeetrootCqrs.API.csproj", "{1675EF30-EFEB-43BA-9912-CD0BB1E393E5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878} = {1079C81A-FC1F-4A70-BC5E-A1A8CF241878}
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81} = {EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootCqrs.DAL", "BeetrootCqrs.DAL\BeetrootCqrs.DAL.csproj", "{1079C81A-FC1F-4A70-BC5E-A1A8CF241878}"
@@ -19,6 +20,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbSQLite", "DbSQLite", "{CA398605-181F-4BAF-9EAB-C515DC03746D}"
 	ProjectSection(SolutionItems) = preProject
 		DbSQLite\beetroot.db = DbSQLite\beetroot.db
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootCqrs.BLL", "BeetrootCqrs.BLL\BeetrootCqrs.BLL.csproj", "{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878} = {1079C81A-FC1F-4A70-BC5E-A1A8CF241878}
 	EndProjectSection
 EndProject
 Global
@@ -35,6 +41,10 @@ Global
 		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1675EF30-EFEB-43BA-9912-CD0BB1E393E5} = {DB85390B-601E-43A4-8F91-10CDA479BF39}
 		{1079C81A-FC1F-4A70-BC5E-A1A8CF241878} = {17104EF1-A8C6-40CA-A2AE-A0B983273850}
+		{EE5D2188-D4BF-4ED5-BBA4-814C472C0D81} = {EB0BB288-39FA-40C3-A9D6-363381F5E357}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0293639-E53F-4E18-A286-17EFCAB394AB}

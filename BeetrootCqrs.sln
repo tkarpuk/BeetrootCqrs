@@ -16,6 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootCqrs.API", "Beetroo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeetrootCqrs.DAL", "BeetrootCqrs.DAL\BeetrootCqrs.DAL.csproj", "{1079C81A-FC1F-4A70-BC5E-A1A8CF241878}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbSQLite", "DbSQLite", "{CA398605-181F-4BAF-9EAB-C515DC03746D}"
+	ProjectSection(SolutionItems) = preProject
+		DbSQLite\beetroot.db = DbSQLite\beetroot.db
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

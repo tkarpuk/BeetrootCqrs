@@ -11,6 +11,7 @@ using BeetrootCqrs.BLL.Services;
 using BeetrootCqrs.API.Services;
 using System;
 using MediatR;
+using BeetrootCqrs.BLL.Configurations;
 
 namespace BeetrootCqrs.API
 {
@@ -27,6 +28,7 @@ namespace BeetrootCqrs.API
             services.AddControllers();
             services.AddSwaggerServiceExt();
             services.AddCors();
+            services.Configure<UdpConfiguration>(_configuration.GetSection("UdpConfiguration"));
             services.AddDbContextExt(_configuration.GetConnectionString("DefaultConnection"));
 
             services.AddSingleton<IUdpReceiveService, UdpReceiveService>();

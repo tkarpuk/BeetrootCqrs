@@ -78,7 +78,7 @@ namespace BeetrootCqrs.BLL.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error in ReceiveMessage: {ex.Message}");
+                _logger.LogError($"Error in ReceiveMessageAsync: {ex.Message}");
             }
             finally
             {

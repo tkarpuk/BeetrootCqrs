@@ -34,7 +34,7 @@ namespace BeetrootCqrs.API
             services.AddSingleton<IUdpReceiveService, UdpReceiveService>();
             services.AddHostedService<UdpHostedService>();
 
-            services.AddMediatR(AppDomain.CurrentDomain.Load("BeetrootCqrs.DAL"));
+            services.AddMediatR(AppDomain.CurrentDomain.Load("BeetrootCqrs.DAL"), AppDomain.CurrentDomain.Load("BeetrootCqrs.BLL"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
